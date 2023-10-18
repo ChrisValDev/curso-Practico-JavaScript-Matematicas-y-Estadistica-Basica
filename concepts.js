@@ -61,3 +61,14 @@ var pi = Math.PI;
 console.log(pi); // Esto mostrará el valor de π en la consola
 
 // Esta constante es útil para realizar cálculos matemáticos que involucran círculos, ángulos y otras operaciones matemáticas que requieren el valor de π.
+
+//Math.sqrt
+//Math.sqrt es un método en JavaScript que se utiliza para calcular la raíz cuadrada de un número. Este método toma un solo argumento, que es el número del cual deseas calcular la raíz cuadrada. La raíz cuadrada es el número que, cuando se multiplica por sí mismo, produce el número original.
+
+Math.sqrt(x)
+
+var numero = 25;
+var raizCuadrada = Math.sqrt(numero);
+console.log(raizCuadrada); // Esto mostrará la raíz cuadrada de 25, que es 5
+
+
