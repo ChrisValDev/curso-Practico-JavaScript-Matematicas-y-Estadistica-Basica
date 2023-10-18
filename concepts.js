@@ -45,3 +45,19 @@
 // Math.sqrt(x): Devuelve la raíz cuadrada de x.
 // Math.cbrt(x): Devuelve la raíz cúbica de x.
 // Estos son los métodos disponibles en el objeto Math en JavaScript para realizar diversas operaciones matemáticas. Puedes utilizar estos métodos para llevar a cabo cálculos matemáticos en tus programas.
+
+// Math.pow
+// El método Math.pow es una función en JavaScript que se utiliza para elevar un número a una potencia especificada. Aquí tienes una descripción más detallada:
+
+Math.pow(base, exponente)
+
+var resultado = Math.pow(2, 3); // Esto elevará 2 a la potencia 3
+console.log(resultado); // El resultado será 8
+
+//Math.PI
+// Math.PI es una propiedad en JavaScript que almacena el valor de la constante matemática π (pi). Pi es una constante fundamental en matemáticas y se utiliza comúnmente en cálculos geométricos y trigonométricos. El valor de π es aproximadamente 3.141592653589793, aunque Math.PI proporciona un valor más preciso. Puedes acceder al valor de π en JavaScript de la siguiente manera:
+
+var pi = Math.PI;
+console.log(pi); // Esto mostrará el valor de π en la consola
+
+// Esta constante es útil para realizar cálculos matemáticos que involucran círculos, ángulos y otras operaciones matemáticas que requieren el valor de π.
