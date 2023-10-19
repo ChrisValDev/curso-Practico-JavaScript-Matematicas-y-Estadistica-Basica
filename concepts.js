@@ -71,4 +71,24 @@ var numero = 25;
 var raizCuadrada = Math.sqrt(numero);
 console.log(raizCuadrada); // Esto mostrará la raíz cuadrada de 25, que es 5
 
+// El método reduce() es una función de orden superior en JavaScript que se utiliza para reducir los elementos de un array a un solo valor. Puedes utilizarlo para realizar operaciones de agregación en un array, como sumar todos los elementos, encontrar el valor máximo o mínimo, o realizar cualquier otra operación personalizada en los elementos del array.
+// Aquí tienes un ejemplo de cómo utilizar reduce() para sumar todos los elementos de un array
 
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // Esto imprimirá 15, que es la suma de todos los elementos del array.
+
+// En este ejemplo:
+
+// Creamos un array llamado numbers que contiene algunos números.
+// Luego, llamamos a numbers.reduce(), pasando una función como argumento.
+// La función que pasamos toma dos parámetros: accumulator y currentValue. accumulator es el valor acumulado actual y currentValue es el valor del elemento actual del array.
+// En la función, simplemente sumamos el accumulator y el currentValue y retornamos el resultado.
+// El segundo argumento pasado a reduce es el valor inicial del accumulator, en este caso, 0. Esto es opcional y se utiliza para establecer un valor inicial para la acumulación.
+// Después de ejecutar reduce(), el resultado se almacena en la variable sum y se imprime en la consola.
+
+// Puedes utilizar reduce() de manera similar para realizar otras operaciones de agregación en arrays. Solo necesitas ajustar la función pasada a reduce() según lo que desees lograr.
