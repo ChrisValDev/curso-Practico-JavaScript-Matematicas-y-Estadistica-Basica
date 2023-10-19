@@ -92,3 +92,7 @@ console.log(sum); // Esto imprimirá 15, que es la suma de todos los elementos d
 // Después de ejecutar reduce(), el resultado se almacena en la variable sum y se imprime en la consola.
 
 // Puedes utilizar reduce() de manera similar para realizar otras operaciones de agregación en arrays. Solo necesitas ajustar la función pasada a reduce() según lo que desees lograr.
+
+
+// Operador de modulo
+// El operador % se llama "operador de módulo". Es un operador matemático que se utiliza para calcular el residuo de la división entre dos números. En JavaScript y en muchos otros lenguajes de programación, se representa con el símbolo %. Por ejemplo, a % b calcula el residuo de la división de a entre b. El operador de módulo es útil para diversas tareas, como determinar si un número es par o impar, ciclos de repetición, y cálculos que involucran patrones cíclicos.
