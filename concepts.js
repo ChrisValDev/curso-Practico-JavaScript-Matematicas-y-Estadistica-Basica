@@ -96,3 +96,41 @@ console.log(sum); // Esto imprimirá 15, que es la suma de todos los elementos d
 
 // Operador de modulo
 // El operador % se llama "operador de módulo". Es un operador matemático que se utiliza para calcular el residuo de la división entre dos números. En JavaScript y en muchos otros lenguajes de programación, se representa con el símbolo %. Por ejemplo, a % b calcula el residuo de la división de a entre b. El operador de módulo es útil para diversas tareas, como determinar si un número es par o impar, ciclos de repetición, y cálculos que involucran patrones cíclicos.
+
+// //Object y sus metodos
+
+// El objeto Object en JavaScript tiene varios métodos que se pueden usar para realizar diversas operaciones en objetos. Aquí tienes una lista de algunos de los métodos más comunes de Object con una breve descripción de cada uno:
+
+// Object.keys(obj): Retorna un array con todas las claves (propiedades) de un objeto.
+
+// Object.values(obj): Retorna un array con los valores de todas las propiedades de un objeto.
+
+// Object.entries(obj): Retorna un array de arrays (pares clave-valor) que representan todas las propiedades de un objeto.
+
+// Object.assign(target, ...sources): Copia las propiedades de uno o más objetos (sources) al objeto de destino (target) y retorna el objeto de destino modificado.
+
+// Object.create(proto, [propertiesObject]): Crea un nuevo objeto con el objeto proto como prototipo y, opcionalmente, define nuevas propiedades en el objeto creado utilizando propertiesObject.
+
+// Object.freeze(obj): Hace que un objeto sea inmutable, es decir, sus propiedades no se pueden modificar, agregar o eliminar.
+
+// Object.seal(obj): Hace que un objeto sea sellado, lo que significa que sus propiedades existentes no pueden ser eliminadas y tampoco se pueden agregar nuevas propiedades, pero los valores de las propiedades existentes aún se pueden modificar.
+
+// Object.is(obj1, obj2): Compara dos objetos para determinar si son iguales. A menudo se utiliza para comparar objetos y evitar problemas de igualdad por referencia.
+
+// Object.hasOwnProperty(prop): Verifica si un objeto tiene una propiedad específica, retornando un valor booleano.
+
+// Object.getOwnPropertyNames(obj): Retorna un array con los nombres de todas las propiedades del objeto, incluyendo las propiedades no-enumerables.
+
+// Object.getOwnPropertyDescriptor(obj, prop): Retorna un objeto que describe la propiedad especificada, incluyendo su configuración (por ejemplo, si es configurable, enumerable, etc.).
+
+// Object.getPrototypeOf(obj): Retorna el prototipo del objeto dado, es decir, el objeto del cual hereda propiedades y métodos.
+
+// Object.toString(): Retorna una representación en cadena del objeto, generalmente su tipo y valor.
+
+// Object.isPrototypeOf(obj): Verifica si un objeto es el prototipo de otro objeto.
+
+// Object.hasOwnProperty(): Determina si un objeto tiene una propiedad específica directamente en sí mismo (no en su cadena de prototipos).
+
+// Object.getOwnPropertySymbols(obj): Retorna un array con todos los símbolos propios (propiedades con claves de tipo Symbol) de un objeto.
+
+// Estos son algunos de los métodos más comunes de Object en JavaScript. Cada uno tiene un propósito específico y se utiliza en diferentes situaciones para trabajar con objetos.
