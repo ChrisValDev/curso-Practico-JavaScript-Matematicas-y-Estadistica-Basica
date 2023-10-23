@@ -34,6 +34,25 @@ function calcularTriangulo(lado1, lado2, base, altura) {
     };
 };
 
+function calcularAlturaTriangulo(lado, base) {
+    if (lado == base) {
+        console.warn('Este no es un triangulo isosceles');
+    } else {
+        return altura = Math.sqrt((lado ** 2) - (base ** 2) / 4)
+    }
+}
+
+function calcularAlturaEscaleno(lado1, lado2, lado3) {
+    const semiperimetro = (lado1 + lado2 + lado3) / 2 ;
+    if (lado1 == lado2 || lado2 == lado3 || lado3 == lado1) {
+        return false;
+    } else {
+        let area = Math.sqrt(semiperimetro *(semiperimetro - lado1)*(semiperimetro - lado2)*(semiperimetro - lado3))
+        let altura = Math.floor((2 / lado1) * area);
+        return altura;
+    }
+}
+
 console.log({
     ladoTriangulo1,
     ladoTriangulo2,
