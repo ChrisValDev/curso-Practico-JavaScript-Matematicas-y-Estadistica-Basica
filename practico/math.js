@@ -49,7 +49,7 @@ function calcularAlturaEscaleno(lado1, lado2, lado3) {
     } else {
         let area = Math.sqrt(semiperimetro *(semiperimetro - lado1)*(semiperimetro - lado2)*(semiperimetro - lado3))
         let altura = Math.floor((2 / lado1) * area);
-        return altura;
+        return redondeo;
     }
 }
 
