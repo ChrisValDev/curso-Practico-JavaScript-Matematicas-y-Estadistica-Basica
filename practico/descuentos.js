@@ -1,6 +1,6 @@
 const btn = document.querySelector('#calcular');
 const inputPrice = document.querySelector('#price');
-const inputDiscount = document.querySelector('#discount');
+const inputCoupon = document.querySelector('#coupon');
 const pResult = document.querySelector('#result');
 
 btn.addEventListener('click', calcularPrecioConDescuento);
@@ -8,14 +8,32 @@ btn.addEventListener('click', calcularPrecioConDescuento);
 function calcularPrecioConDescuento() {
 
     const price = Number(inputPrice.value);
-    const discount = Number(inputDiscount.value);
-    console.log({price, discount});
-    if (!price || !discount) {
-        pResult.innerText = `Ingresa informacion numerica en los apartados correspondientes`;
-        return;
+    const coupon = inputCoupon.value;
+    let discount;
+
+    switch (coupon) {
+        case 'JuanDC_es_Batman':
+            discount = 25;
+            break;
+        case 'No_le_digas_a_nadie':
+            discount = 30;
+            break;
+        default:
+            pResult.innerText = `El cupon no es valido`;
+            return;
     }
-    if (discount > 100) {
-        pResult.innerText = `Descuento no valido, no se puede regalar el producto. PAGA!!!`;
+
+    // if (coupon == 'JuanDC_es_Batman') {
+    //     discount = 25;    
+    // } else if (coupon == 'No_le_digas_a_nadie') {
+    //     discount = 30;
+    // } else {
+    //     pResult.innerText = `El cupon no es valido`;
+    //     return;
+    // }
+
+    if (!price || !coupon) {
+        pResult.innerText = `Ingresa informacion numerica en los apartados correspondientes`;
         return;
     }
 
