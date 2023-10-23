@@ -34,10 +34,10 @@ function calcularPrecioConDescuento() {
         return couponElement.name == coupon;
     }
 
-    const couponInArray = couponsList.filter(isCouponInArray);
+    const couponInArray = couponsList.find(isCouponInArray);
 
-    if (couponInArray.length > 0) {
-        discount = couponInArray[0].discount;
+    if (couponInArray) {
+        discount = couponInArray.discount;
     } else {
         pResult.innerText = 'El cupon no es valido';
         return;
