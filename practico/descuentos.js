@@ -5,11 +5,19 @@ const pResult = document.querySelector('#result');
 
 btn.addEventListener('click', calcularPrecioConDescuento);
 
-const couponsObj = {
-    'compraGrande': 30,
-    'compraMedia': 20,
-    'compraChica': 10,
-};
+const couponsList = [];
+couponsList.push({
+    name: 'compraGrande',
+    discount: 30,
+});
+couponsList.push({
+    name: 'compraMedia',
+    discount: 20,
+});
+couponsList.push({
+    name: 'compraChica',
+    discount: 10,
+});
 
 function calcularPrecioConDescuento() {
     const price = Number(inputPrice.value);
@@ -21,13 +29,27 @@ function calcularPrecioConDescuento() {
     }
 
     let discount;
+// couponElement es = a cada objeto dentro del array.
+    function isCouponInArray(couponElement) {
+        return couponElement.name == coupon;
+    }
 
-    if (couponsObj[coupon]) {
-        discount = couponsObj[coupon];
+    const couponInArray = couponsList.filter(isCouponInArray);
+
+    if (couponInArray.length > 0) {
+        discount = couponInArray[0].discount;
     } else {
-        pResult.innerText = `El cupon no es valido`;
+        pResult.innerText = 'El cupon no es valido';
         return;
     }
+
+    console.log({
+        coupon,
+        discount,
+        couponInArray,
+        couponsList,
+    });
+
     const newPrice = (price * (100 - discount)) / 100;
     console.log(newPrice);
 
