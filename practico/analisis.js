@@ -44,3 +44,20 @@ function proyeccionPorPersona(nombrePersona) {
 
     return nuevoSalario;
 }
+
+const empresas = {};
+for (const objeto of salarios) {
+    for (const elemento of objeto.trabajos) {
+        if (!empresas[elemento.empresa]) {
+            empresas[elemento.empresa] = {};
+        }
+
+        if (!empresas[elemento.empresa][elemento.year]) {
+            empresas[elemento.empresa][elemento.year] = [];    
+        }
+
+        empresas[elemento.empresa][elemento.year].push(elemento.salario);
+    }
+}
+
+console.log({empresas});
