@@ -5,6 +5,21 @@ function esImPar(lista) {
     return lista.length % 2;
 }
 
+function calcularModa(lista) {
+   const listaCount = {};
+   
+   for (let index = 0; index < lista.length; index++) {
+    const elemento = lista[index];
+
+    if (listaCount[elemento]) {
+        listaCount[elemento] += 1;
+    } else {
+        listaCount[elemento] = 1;
+    }
+   }
+   console.log(listaCount);
+}
+
 function calcularMediana(listaDesordenada) {
     const lista = ordenarLista(listaDesordenada);
     const listaEsPar = esPar(lista);
@@ -23,7 +38,7 @@ function calcularMediana(listaDesordenada) {
         console.log(indexMitadListaImpar);
         console.log(medianaListaImpar);
         return medianaListaImpar;
-    }
+ }
 }
 
 function calcularPromedio(lista) {
