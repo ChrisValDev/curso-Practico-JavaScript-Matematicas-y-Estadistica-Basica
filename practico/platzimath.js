@@ -17,7 +17,13 @@ function calcularModa(lista) {
         listaCount[elemento] = 1;
     }
    }
-   console.log(listaCount);
+   
+   const listaArray = Object.entries(listaCount);
+   const listaOrdenada = ordenarListaBidimensional(listaArray, 1);
+   const listaMaxNumber = listaOrdenada[listaOrdenada.length - 1];
+// console.log({listaCount, listaArray, listaOrdenada, listaMaxNumber});
+   const moda = listaMaxNumber[0];
+   return moda;
 }
 
 function calcularMediana(listaDesordenada) {
@@ -52,19 +58,9 @@ function calcularPromedio(lista) {
     return promedio;
 }
 
-function ordenarLista(listaDesordenada) {
+function ordenarListaBidimensional(listaDesordenada, i) {
     function ordenarListaSort(valorAcumulado, nuevoValor) {
-        // if (valorAcumulado > nuevoValor) {
-        //     return 1;
-        // } else if (valorAcumulado == nuevoValor) {
-        //     return 0;
-        // } else if (valorAcumulado < nuevoValor) {
-        //     return -1;
-        // }
-        return valorAcumulado - nuevoValor;
-        // return 10 - 5 -> 5;
-        // return 5 - 5 -> 0;
-        // return 5 - 10 -> -5;
+        return valorAcumulado[i] - nuevoValor[i];// Se coloca un indice [i] para que ordene con referencia al indice que se indique en la funcion.
     }
     const lista = listaDesordenada.sort(ordenarListaSort);
     return lista; 
